@@ -1,0 +1,1338 @@
+```html
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertising for All | Jangkauan Luas, Solusi Cerdas</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Ikon Pendukung -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#0F2952',
+                            blue: '#1D63DC',
+                            sky: '#38BDF8',
+                            orange: '#F97316',
+                            orangeLight: '#FFEDD5',
+                            green: '#16A34A',
+                            greenLight: '#DCFCE7',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-14px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Kustomisasi Scrollbar & Utilitas Tambahan */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1E293B;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .hero-mesh {
+            background-color: #0F2952;
+            background-image: 
+                radial-gradient(at 85% 15%, rgba(29, 99, 220, 0.45) 0px, transparent 50%),
+                radial-gradient(at 15% 85%, rgba(249, 115, 22, 0.25) 0px, transparent 50%),
+                radial-gradient(at 80% 80%, rgba(22, 163, 74, 0.25) 0px, transparent 50%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        /* Custom Range Slider */
+        input[type=range] {
+            -webkit-appearance: none;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 22px;
+            width: 22px;
+            border-radius: 50%;
+            background: #F97316;
+            border: 3px solid #FFFFFF;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+            cursor: pointer;
+            margin-top: -8px;
+            transition: transform 0.15s ease;
+        }
+        input[type=range]::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 6px;
+            cursor: pointer;
+            background: #CBD5E1;
+            border-radius: 999px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 antialiased selection:bg-brand-orange selection:text-white">
+
+    <!-- =====================================================================
+         1. NAVIGASI BAR RESPONSIF
+    ====================================================================== -->
+    <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo SVG Kustom "Advertising for All" -->
+                <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                    <div class="w-11 h-11 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center justify-center shadow-sm group-hover:shadow-md transition-all">
+                        <svg viewBox="0 0 64 64" class="w-9 h-9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradBlue" x1="10" y1="54" x2="54" y2="10" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#0F2952"/>
+                                    <stop offset="60%" stop-color="#1D63DC"/>
+                                    <stop offset="100%" stop-color="#38BDF8"/>
+                                </linearGradient>
+                                <linearGradient id="gradOrange" x1="14" y1="56" x2="48" y2="18" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#EA580C"/>
+                                    <stop offset="100%" stop-color="#FB923C"/>
+                                </linearGradient>
+                                <linearGradient id="gradGreen" x1="28" y1="56" x2="50" y2="24" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#15803D"/>
+                                    <stop offset="100%" stop-color="#4ADE80"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Gelombang Hijau -->
+                            <path d="M31 56C31 44 37 33 48 22L44 20C33 30 25 42 24 56H31Z" fill="url(#gradGreen)"/>
+                            <!-- Gelombang Oranye -->
+                            <path d="M18 56C21 42 32 30 50 17L47 15C28 27 16 40 11 56H18Z" fill="url(#gradOrange)"/>
+                            <!-- Panah Dinamis Biru -->
+                            <path d="M9 44C12 31 23 27 33 27C40 27 46 21 51 15L44 10L59 7L56 22L50 17C44 25 36 32 25 32C17 32 13 37 11 46L9 44Z" fill="url(#gradBlue)"/>
+                            <!-- Ikon Megafon Mini -->
+                            <path d="M44 42L52 38V48L44 44H41V42H44Z" fill="#0F2952"/>
+                            <circle cx="24" cy="18" r="3" fill="#1D63DC"/>
+                            <circle cx="33" cy="13" r="2.2" fill="#F97316"/>
+                            <circle cx="53" cy="31" r="2.5" fill="#16A34A"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-brand-navy leading-none">
+                            ADVERTISING <span class="text-brand-orange">FOR ALL</span>
+                        </span>
+                        <span class="text-[11px] font-medium text-slate-500 tracking-wide mt-0.5">
+                            Jangkauan Luas, Solusi Cerdas
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Menu Navigasi Desktop -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#tentang" class="text-sm font-semibold text-slate-600 hover:text-brand-blue transition-colors">Tentang Kami</a>
+                    <a href="#layanan" class="text-sm font-semibold text-slate-600 hover:text-brand-blue transition-colors">Layanan</a>
+                    <a href="#keunggulan" class="text-sm font-semibold text-slate-600 hover:text-brand-blue transition-colors">Keunggulan</a>
+                    <a href="#simulasi" class="text-sm font-semibold text-slate-600 hover:text-brand-blue transition-colors">Paket &amp; Simulasi</a>
+                    <a href="#kontak" class="text-sm font-semibold text-slate-600 hover:text-brand-blue transition-colors">Kontak</a>
+                </nav>
+
+                <!-- Tombol CTA Desktop & Hamburger Mobile -->
+                <div class="flex items-center gap-3">
+                    <a href="#kontak" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-orange hover:bg-orange-600 text-white font-semibold text-sm shadow-md shadow-orange-500/20 hover:shadow-lg hover:-translate-y-0.5 transition-all">
+                        <span>Konsultasi Gratis</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <button id="mobile-menu-btn" aria-label="Buka Menu" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown Menu Mobile -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+            <a href="#tentang" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue">Tentang Kami</a>
+            <a href="#layanan" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue">Layanan Utama</a>
+            <a href="#keunggulan" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue">Keunggulan Bersaing</a>
+            <a href="#simulasi" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue">Paket &amp; Simulasi Anggaran</a>
+            <a href="#kontak" class="mobile-link block px-4 py-3 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-brand-blue">Kontak</a>
+            <div class="pt-2">
+                <a href="#kontak" class="mobile-link w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-brand-orange text-white font-bold text-base shadow-md">
+                    <span>Mulai Konsultasi Gratis</span>
+                    <i class="fa-solid fa-bullhorn"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- =====================================================================
+         2. HERO SECTION
+    ====================================================================== -->
+    <section class="relative pt-28 pb-20 lg:pt-36 lg:pb-28 hero-mesh text-white overflow-hidden">
+        <!-- Pola Jaringan Latar Belakang Halus -->
+        <div class="absolute inset-0 opacity-15 pointer-events-none">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid-pattern" width="48" height="48" patternUnits="userSpaceOnUse">
+                        <path d="M 48 0 L 0 0 0 48" fill="none" stroke="white" stroke-width="0.75"/>
+                        <circle cx="0" cy="0" r="2" fill="white"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid-pattern)"/>
+            </svg>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Kolom Teks Hero -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-sm font-medium text-sky-200">
+                        <span class="w-2.5 h-2.5 rounded-full bg-brand-green animate-ping"></span>
+                        <span>Solusi Periklanan Inklusif untuk Semua Skala Bisnis</span>
+                    </div>
+
+                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
+                        Setiap Bisnis Berhak <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-orange-300 to-emerald-300">
+                            Bersinar &amp; Bertumbuh
+                        </span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        <strong class="text-white">Jangkauan Luas, Solusi Cerdas.</strong> Kami mendemokratisasi akses layanan periklanan kelas atas—mulai dari UMKM lokal hingga korporasi besar—melalui strategi kreatif yang terukur dan berdampak nyata.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#kontak" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-brand-orange hover:bg-orange-600 text-white font-bold text-base shadow-xl shadow-orange-600/30 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3">
+                            <span>Mulai Konsultasi</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                        <a href="#simulasi" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/25 text-white font-semibold text-base backdrop-blur-sm transition-all flex items-center justify-center gap-2.5">
+                            <i class="fa-solid fa-calculator text-sky-300"></i>
+                            <span>Simulasi Anggaran</span>
+                        </a>
+                    </div>
+
+                    <!-- Statistik Ringkas -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/15 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <div class="font-heading text-2xl sm:text-3xl font-extrabold text-white">500+</div>
+                            <div class="text-xs sm:text-sm text-slate-300">Klien UMKM &amp; Brand</div>
+                        </div>
+                        <div>
+                            <div class="font-heading text-2xl sm:text-3xl font-extrabold text-orange-400">3.8x</div>
+                            <div class="text-xs sm:text-sm text-slate-300">Rata-rata ROI Iklan</div>
+                        </div>
+                        <div>
+                            <div class="font-heading text-2xl sm:text-3xl font-extrabold text-emerald-400">360°</div>
+                            <div class="text-xs sm:text-sm text-slate-300">Digital &amp; Tradisional</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Visual / Ilustrasi Animasi Elemen Periklanan -->
+                <div class="lg:col-span-5 relative flex items-center justify-center">
+                    <div class="relative w-full max-w-md aspect-square">
+                        <!-- Lingkaran Cahaya Belakang -->
+                        <div class="absolute inset-6 rounded-full bg-gradient-to-tr from-brand-blue/40 via-brand-orange/30 to-brand-green/40 blur-2xl animate-pulse-slow"></div>
+
+                        <!-- Kartu Utama Ilustrasi Kampanye -->
+                        <div class="relative z-10 w-full h-full rounded-3xl bg-white/10 border border-white/20 backdrop-blur-md p-6 sm:p-8 flex flex-col justify-between shadow-2xl">
+                            
+                            <!-- Header Kartu -->
+                            <div class="flex items-center justify-between">
+                                <span class="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-200 text-xs font-semibold">
+                                    <i class="fa-solid fa-arrow-trend-up mr-1"></i> Kampanye Aktif
+                                </span>
+                                <div class="flex gap-1.5">
+                                    <span class="w-3 h-3 rounded-full bg-orange-400"></span>
+                                    <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+                                    <span class="w-3 h-3 rounded-full bg-sky-400"></span>
+                                </div>
+                            </div>
+
+                            <!-- SVG Ilustrasi Megafon & Panah Pertumbuhan -->
+                            <div class="my-auto flex items-center justify-center py-4 animate-float">
+                                <svg viewBox="0 0 260 200" class="w-full max-w-[260px] drop-shadow-xl" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Gelombang Sinyal -->
+                                    <path d="M185 65C198 78 198 102 185 115" stroke="#4ADE80" stroke-width="6" stroke-linecap="round"/>
+                                    <path d="M202 50C222 72 222 108 202 130" stroke="#FB923C" stroke-width="6" stroke-linecap="round"/>
+                                    <path d="M219 36C245 65 245 115 219 144" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>
+                                    
+                                    <!-- Panah Melengkung Naik -->
+                                    <path d="M35 160C75 155 115 125 145 45" stroke="url(#heroArrow)" stroke-width="10" stroke-linecap="round"/>
+                                    <path d="M128 52L148 37L156 61" stroke="#38BDF8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                                    
+                                    <!-- Megafon 3D Stylish -->
+                                    <g transform="translate(55, 55) rotate(-12)">
+                                        <path d="M20 35L85 10V80L20 55H8C3.58 55 0 51.42 0 47V43C0 38.58 3.58 35 8 35H20Z" fill="#FFFFFF"/>
+                                        <path d="M85 10L100 5V85L85 80V10Z" fill="#F97316"/>
+                                        <path d="M22 55L32 82C33.5 86 38 87.5 41.5 85.5L47 82.5C50 80.5 51 76.5 49.5 73L40 55H22Z" fill="#16A34A"/>
+                                        <rect x="25" y="34" width="12" height="22" rx="3" fill="#1D63DC"/>
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="heroArrow" x1="35" y1="160" x2="148" y2="37" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F97316"/>
+                                            <stop offset="0.5" stop-color="#4ADE80"/>
+                                            <stop offset="1" stop-color="#38BDF8"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+
+                            <!-- Footer Kartu -->
+                            <div class="bg-brand-navy/80 rounded-2xl p-4 border border-white/10 flex items-center justify-between">
+                                <div>
+                                    <p class="text-xs text-slate-300">Jangkauan Audiens Terukur</p>
+                                    <p class="font-heading font-bold text-white text-base">+245% Pertumbuhan Brand</p>
+                                </div>
+                                <div class="w-10 h-10 rounded-xl bg-brand-orange flex items-center justify-center text-white">
+                                    <i class="fa-solid fa-rocket"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Badge Melayang 1 -->
+                        <div class="hidden sm:flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-white text-brand-navy shadow-xl absolute -left-8 top-12 z-20 animate-float-delayed">
+                            <div class="w-9 h-9 rounded-xl bg-brand-orangeLight text-brand-orange flex items-center justify-center">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <div>
+                                <p class="text-[11px] font-medium text-slate-500">Targeting Presisi</p>
+                                <p class="text-xs font-extrabold">UMKM hingga Korporat</p>
+                            </div>
+                        </div>
+
+                        <!-- Badge Melayang 2 -->
+                        <div class="hidden sm:flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-white text-brand-navy shadow-xl absolute -right-6 bottom-16 z-20 animate-float">
+                            <div class="w-9 h-9 rounded-xl bg-brand-greenLight text-brand-green flex items-center justify-center">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <p class="text-[11px] font-medium text-slate-500">Transparansi Data</p>
+                                <p class="text-xs font-extrabold">Laporan Real-Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         3. BAGIAN TENTANG KAMI (FILOSOFI & MISI)
+    ====================================================================== -->
+    <section id="tentang" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Visual Kolase Nilai -->
+                <div class="lg:col-span-5 space-y-5">
+                    <div class="p-7 rounded-3xl bg-gradient-to-br from-brand-navy to-brand-blue text-white shadow-xl relative overflow-hidden">
+                        <div class="absolute -right-6 -bottom-6 opacity-15 text-8xl">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                        </div>
+                        <span class="inline-block px-3 py-1 rounded-lg bg-white/15 text-xs font-bold uppercase tracking-wider mb-3">
+                            Filosofi Kami
+                        </span>
+                        <h3 class="font-heading text-2xl font-bold mb-3">
+                            Mendemokratisasi Dunia Periklanan
+                        </h3>
+                        <p class="text-slate-200 text-sm leading-relaxed">
+                            Kami percaya kualitas kampanye iklan tidak seharusnya dibatasi oleh ukuran perusahaan. Setiap pelaku usaha—dari warung kopi lokal hingga korporasi nasional—berhak mendapatkan panggung untuk bersinar.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-5 rounded-2xl bg-orange-50 border border-orange-100">
+                            <div class="w-10 h-10 rounded-xl bg-brand-orange text-white flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+                            <h4 class="font-heading font-bold text-brand-navy text-base">Dukungan UMKM</h4>
+                            <p class="text-xs text-slate-600 mt-1">Paket ramah anggaran dengan dampak lokal &amp; nasional maksimal.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-emerald-50 border border-emerald-100">
+                            <div class="w-10 h-10 rounded-xl bg-brand-green text-white flex items-center justify-center mb-3">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <h4 class="font-heading font-bold text-brand-navy text-base">Skala Korporasi</h4>
+                            <p class="text-xs text-slate-600 mt-1">Kampanye multi-kanal terintegrasi berskala besar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Konten Narasi Tentang Kami -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-brand-blue font-bold text-sm uppercase tracking-wider">
+                        <span class="w-8 h-0.5 bg-brand-orange"></span>
+                        <span>Tentang Advertising for All</span>
+                    </div>
+
+                    <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-brand-navy leading-tight">
+                        Mitra Strategis Inklusif untuk <span class="text-brand-blue">Pertumbuhan Bisnis Tanpa Batas</span>
+                    </h2>
+
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+                        <strong>Advertising for All</strong> didirikan dengan satu tujuan utama: membuka akses layanan periklanan berkualitas tinggi bagi semua kalangan bisnis. Kami memadukan kreativitas tanpa batas, strategi berbasis data, serta teknologi pemasaran terkini untuk menjangkau audiens yang tepat.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-blue-100 text-brand-blue flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-brand-navy text-base">Akses Terjangkau &amp; Transparan</h4>
+                                <p class="text-sm text-slate-600">Tidak ada biaya tersembunyi. Setiap rupiah anggaran iklan Anda dioptimalkan untuk menghasilkan konversi nyata.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-orange-100 text-brand-orange flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-brand-navy text-base">Mendobrak Batasan Kreativitas</h4>
+                                <p class="text-sm text-slate-600">Menghadirkan ide-ide segar yang relevan dengan budaya lokal maupun tren digital global.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-100 text-brand-green flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-brand-navy text-base">Ekosistem Pemasaran Terpadu</h4>
+                                <p class="text-sm text-slate-600">Sinergi antara periklanan digital modern dan media tradisional untuk jangkauan audiens menyeluruh.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         4. BAGIAN LAYANAN UTAMA INTERAKTIF
+    ====================================================================== -->
+    <section id="layanan" class="py-20 lg:py-28 bg-slate-50 border-y border-slate-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Header Bagian -->
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-brand-blue font-bold text-xs uppercase tracking-wider">
+                    Layanan Komprehensif
+                </span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-brand-navy">
+                    Solusi Periklanan 360° untuk Kebutuhan Anda
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Pilih kategori layanan di bawah ini untuk melihat bagaimana kami membantu merek Anda mendominasi pasar.
+                </p>
+            </div>
+
+            <!-- Navigasi Tab Interaktif -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10" role="tablist">
+                <button onclick="switchServiceTab('digital')" id="tab-digital" class="service-tab active px-5 py-3.5 rounded-2xl font-heading font-bold text-sm sm:text-base transition-all flex items-center gap-2.5 bg-brand-navy text-white shadow-lg">
+                    <i class="fa-solid fa-laptop-code text-sky-300"></i>
+                    <span>Pemasaran Digital</span>
+                </button>
+                <button onclick="switchServiceTab('tradisional')" id="tab-tradisional" class="service-tab px-5 py-3.5 rounded-2xl font-heading font-bold text-sm sm:text-base transition-all flex items-center gap-2.5 bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+                    <i class="fa-solid fa-tower-broadcast text-brand-orange"></i>
+                    <span>Periklanan Tradisional</span>
+                </button>
+                <button onclick="switchServiceTab('kreatif')" id="tab-kreatif" class="service-tab px-5 py-3.5 rounded-2xl font-heading font-bold text-sm sm:text-base transition-all flex items-center gap-2.5 bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+                    <i class="fa-solid fa-palette text-brand-green"></i>
+                    <span>Layanan Kreatif</span>
+                </button>
+                <button onclick="switchServiceTab('strategi')" id="tab-strategi" class="service-tab px-5 py-3.5 rounded-2xl font-heading font-bold text-sm sm:text-base transition-all flex items-center gap-2.5 bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+                    <i class="fa-solid fa-chess-knight text-brand-blue"></i>
+                    <span>Konsultasi &amp; Strategi</span>
+                </button>
+            </div>
+
+            <!-- Kontainer Konten Tab Layanan -->
+            <div id="service-content-area" class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-100 transition-all">
+                <!-- Konten akan diisi secara dinamis lewat JavaScript -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         5. BAGIAN KEUNGGULAN BERSAING
+    ====================================================================== -->
+    <section id="keunggulan" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-brand-orange font-bold text-xs uppercase tracking-wider">
+                    Mengapa Memilih Kami?
+                </span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-brand-navy">
+                    5 Pilar Keunggulan Advertising for All
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Kami menggabungkan empati terhadap pertumbuhan bisnis Anda dengan eksekusi periklanan berstandar tinggi.
+                </p>
+            </div>
+
+            <!-- Grid 5 Keunggulan Bersaing -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                
+                <!-- 1. Inklusivitas -->
+                <div class="group p-7 rounded-3xl bg-slate-50 hover:bg-brand-navy border border-slate-200/80 hover:border-brand-navy transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-100 text-brand-blue group-hover:bg-brand-blue group-hover:text-white flex items-center justify-center text-2xl mb-6 transition-colors">
+                        <i class="fa-solid fa-users-rays"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-brand-navy group-hover:text-white mb-3 transition-colors">
+                        1. Inklusivitas Tanpa Batas
+                    </h3>
+                    <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed transition-colors">
+                        Kami melayani bisnis dari semua ukuran dan anggaran. Bagi kami, tidak ada proyek yang terlalu kecil untuk diperhatikan maupun terlalu besar untuk ditangani.
+                    </p>
+                </div>
+
+                <!-- 2. Kreativitas Tanpa Batas -->
+                <div class="group p-7 rounded-3xl bg-slate-50 hover:bg-brand-navy border border-slate-200/80 hover:border-brand-navy transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-2xl bg-orange-100 text-brand-orange group-hover:bg-brand-orange group-hover:text-white flex items-center justify-center text-2xl mb-6 transition-colors">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-brand-navy group-hover:text-white mb-3 transition-colors">
+                        2. Kreativitas Tanpa Batas
+                    </h3>
+                    <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed transition-colors">
+                        Tim kreatif multidisiplin kami selalu siap menghadirkan konsep segar, storytelling yang memikat, dan solusi out-of-the-box agar merek Anda tampil menonjol.
+                    </p>
+                </div>
+
+                <!-- 3. Keahlian Multidisiplin -->
+                <div class="group p-7 rounded-3xl bg-slate-50 hover:bg-brand-navy border border-slate-200/80 hover:border-brand-navy transition-all duration-300 shadow-sm hover:shadow-xl">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-brand-green group-hover:bg-brand-green group-hover:text-white flex items-center justify-center text-2xl mb-6 transition-colors">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-brand-navy group-hover:text-white mb-3 transition-colors">
+                        3. Keahlian Multidisiplin
+                    </h3>
+                    <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed transition-colors">
+                        Penguasaan mendalam atas lanskap periklanan digital modern maupun media konvensional memastikan pesan Anda sampai di setiap titik sentuh konsumen.
+                    </p>
+                </div>
+
+                <!-- 4. Fleksibilitas -->
+                <div class="group p-7 rounded-3xl bg-slate-50 hover:bg-brand-navy border border-slate-200/80 hover:border-brand-navy transition-all duration-300 shadow-sm hover:shadow-xl lg:col-start-1 lg:ml-auto lg:w-full">
+                    <div class="w-14 h-14 rounded-2xl bg-sky-100 text-brand-blue group-hover:bg-sky-500 group-hover:text-white flex items-center justify-center text-2xl mb-6 transition-colors">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-brand-navy group-hover:text-white mb-3 transition-colors">
+                        4. Fleksibilitas Tinggi
+                    </h3>
+                    <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed transition-colors">
+                        Strategi yang lincah dan dapat disesuaikan secara dinamis mengikuti perubahan tren pasar, musiman, serta target spesifik bisnis Anda.
+                    </p>
+                </div>
+
+                <!-- 5. Komitmen terhadap Hasil -->
+                <div class="group p-7 rounded-3xl bg-gradient-to-br from-brand-navy to-brand-blue text-white border border-brand-blue shadow-lg md:col-span-2 lg:col-span-2 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-white/15 text-orange-300 flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold mb-3">
+                            5. Komitmen Penuh terhadap Hasil (ROI)
+                        </h3>
+                        <p class="text-slate-200 text-sm sm:text-base leading-relaxed max-w-2xl">
+                            Kami tidak sekadar mengejar tayangan kosong. Fokus utama kami adalah pencapaian tujuan bisnis Anda—mulai dari peningkatan kesadaran merek, prospek berkualitas, hingga konversi penjualan dan pengembalian investasi (ROI) maksimal.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-5 border-t border-white/15 flex flex-wrap items-center justify-between gap-4">
+                        <span class="text-xs sm:text-sm font-medium text-sky-200">
+                            <i class="fa-solid fa-chart-pie mr-1.5"></i> Laporan Kinerja Transparan Setiap Periode
+                        </span>
+                        <a href="#simulasi" class="inline-flex items-center gap-2 text-sm font-bold text-orange-300 hover:text-orange-200">
+                            <span>Cek Simulasi Paket</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         6. KALKULATOR / SIMULASI ESTIMASI ANGGARAN IKLAN INTERAKTIF
+    ====================================================================== -->
+    <section id="simulasi" class="py-20 lg:py-28 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Aksen Latar -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-blue/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-orange/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-white/10 text-emerald-300 font-bold text-xs uppercase tracking-wider border border-white/15">
+                    Perencanaan Cerdas
+                </span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold">
+                    Simulasi Estimasi Anggaran &amp; Paket Iklan
+                </h2>
+                <p class="text-slate-300 text-base sm:text-lg">
+                    Sesuaikan skala bisnis, tujuan utama kampanye, dan estimasi anggaran bulanan Anda untuk mendapatkan rekomendasi paket terbaik.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+                
+                <!-- Panel Kontrol Kiri -->
+                <div class="lg:col-span-7 bg-white/5 border border-white/15 rounded-3xl p-6 sm:p-8 backdrop-blur-md space-y-8">
+                    
+                    <!-- Langkah 1: Skala Bisnis -->
+                    <div>
+                        <label class="block font-heading font-bold text-base sm:text-lg mb-3 text-white">
+                            1. Pilih Skala Bisnis Anda
+                        </label>
+                        <div class="grid grid-cols-3 gap-3">
+                            <button type="button" onclick="selectScale('umkm')" id="scale-umkm" class="scale-btn p-4 rounded-2xl border-2 border-brand-orange bg-brand-orange/20 text-left transition-all">
+                                <i class="fa-solid fa-store text-brand-orange text-xl mb-2 block"></i>
+                                <div class="font-heading font-bold text-sm sm:text-base">UMKM / Rintisan</div>
+                                <div class="text-xs text-slate-300 mt-0.5">Fokus pertumbuhan lokal</div>
+                            </button>
+                            <button type="button" onclick="selectScale('menengah')" id="scale-menengah" class="scale-btn p-4 rounded-2xl border border-white/15 bg-white/5 hover:bg-white/10 text-left transition-all">
+                                <i class="fa-solid fa-briefcase text-sky-400 text-xl mb-2 block"></i>
+                                <div class="font-heading font-bold text-sm sm:text-base">Menengah</div>
+                                <div class="text-xs text-slate-300 mt-0.5">Ekspansi pasar regional</div>
+                            </button>
+                            <button type="button" onclick="selectScale('korporasi')" id="scale-korporasi" class="scale-btn p-4 rounded-2xl border border-white/15 bg-white/5 hover:bg-white/10 text-left transition-all">
+                                <i class="fa-solid fa-city text-emerald-400 text-xl mb-2 block"></i>
+                                <div class="font-heading font-bold text-sm sm:text-base">Korporasi</div>
+                                <div class="text-xs text-slate-300 mt-0.5">Dominasi nasional 360°</div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Langkah 2: Tujuan Kampanye -->
+                    <div>
+                        <label class="block font-heading font-bold text-base sm:text-lg mb-3 text-white">
+                            2. Tujuan Utama Kampanye
+                        </label>
+                        <div class="grid sm:grid-cols-3 gap-3">
+                            <button type="button" onclick="selectGoal('awareness')" id="goal-awareness" class="goal-btn px-4 py-3.5 rounded-2xl border-2 border-sky-400 bg-sky-500/20 text-sm font-semibold flex items-center gap-2.5 transition-all">
+                                <i class="fa-solid fa-bullhorn text-sky-300"></i>
+                                <span>Brand Awareness</span>
+                            </button>
+                            <button type="button" onclick="selectGoal('leads')" id="goal-leads" class="goal-btn px-4 py-3.5 rounded-2xl border border-white/15 bg-white/5 hover:bg-white/10 text-sm font-semibold flex items-center gap-2.5 transition-all">
+                                <i class="fa-solid fa-magnet text-orange-300"></i>
+                                <span>Prospek &amp; Penjualan</span>
+                            </button>
+                            <button type="button" onclick="selectGoal('branding')" id="goal-branding" class="goal-btn px-4 py-3.5 rounded-2xl border border-white/15 bg-white/5 hover:bg-white/10 text-sm font-semibold flex items-center gap-2.5 transition-all">
+                                <i class="fa-solid fa-wand-magic-sparkles text-emerald-300"></i>
+                                <span>Rebranding &amp; Konten</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Langkah 3: Slider Anggaran Bulanan -->
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <label for="budget-slider" class="font-heading font-bold text-base sm:text-lg text-white">
+                                3. Estimasi Anggaran Bulanan
+                            </label>
+                            <span id="budget-display" class="px-4 py-1.5 rounded-xl bg-brand-orange text-white font-heading font-extrabold text-base sm:text-lg shadow">
+                                Rp 5.000.000
+                            </span>
+                        </div>
+                        <input type="range" id="budget-slider" min="2" max="100" value="5" step="1" class="w-full my-2" oninput="updateSimulation()">
+                        <div class="flex justify-between text-xs text-slate-400 mt-1">
+                            <span>Rp 2 Juta (Starter)</span>
+                            <span>Rp 25 Juta (Growth)</span>
+                            <span>Rp 100 Juta+ (Enterprise)</span>
+                        </div>
+                    </div>
+
+                    <!-- Langkah 4: Tambahan Kanal -->
+                    <div>
+                        <label class="block font-heading font-bold text-sm text-slate-300 mb-3">
+                            Kanal Tambahan Opsional:
+                        </label>
+                        <div class="flex flex-wrap gap-3">
+                            <label class="cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/15 hover:bg-white/10 text-sm">
+                                <input type="checkbox" id="addon-video" onchange="updateSimulation()" class="rounded text-brand-orange focus:ring-0">
+                                <span>Produksi Video Iklan</span>
+                            </label>
+                            <label class="cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/15 hover:bg-white/10 text-sm">
+                                <input type="checkbox" id="addon-ooh" onchange="updateSimulation()" class="rounded text-brand-orange focus:ring-0">
+                                <span>Media Cetak / OOH</span>
+                            </label>
+                            <label class="cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/15 hover:bg-white/10 text-sm">
+                                <input type="checkbox" id="addon-seo" onchange="updateSimulation()" class="rounded text-brand-orange focus:ring-0">
+                                <span>Optimasi SEO Website</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel Hasil Rekomendasi Kanan -->
+                <div class="lg:col-span-5 bg-white text-brand-navy rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col justify-between border-t-8 border-brand-orange">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span id="rec-badge" class="px-3.5 py-1 rounded-full bg-orange-100 text-brand-orange font-bold text-xs uppercase tracking-wider">
+                                Paket UMKM Akselerasi
+                            </span>
+                            <span class="text-xs font-semibold text-slate-500">Estimasi Bulanan</span>
+                        </div>
+
+                        <h3 id="rec-title" class="font-heading text-2xl font-extrabold text-brand-navy mb-2">
+                            Starter Growth Digital
+                        </h3>
+                        <p id="rec-desc" class="text-sm text-slate-600 mb-6">
+                            Dirancang khusus untuk UMKM yang ingin meningkatkan visibilitas online dan menjangkau pelanggan baru secara cepat.
+                        </p>
+
+                        <!-- Estimasi Metrik Hasil -->
+                        <div class="grid grid-cols-2 gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-200/80 mb-6">
+                            <div>
+                                <span class="text-xs text-slate-500 block">Estimasi Jangkauan</span>
+                                <span id="rec-reach" class="font-heading font-extrabold text-lg sm:text-xl text-brand-blue">45.000 - 80.000</span>
+                                <span class="text-[11px] text-slate-500 block">Audiens tertarget / bln</span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-500 block">Potensi Interaksi / Klik</span>
+                                <span id="rec-clicks" class="font-heading font-extrabold text-lg sm:text-xl text-brand-green">1.500 - 3.200</span>
+                                <span class="text-[11px] text-slate-500 block">Kunjungan / prospek</span>
+                            </div>
+                        </div>
+
+                        <!-- Daftar Fitur Paket -->
+                        <div class="space-y-2.5 mb-8">
+                            <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Cakupan Layanan Rekomendasi:</p>
+                            <ul id="rec-features" class="space-y-2 text-sm text-slate-700">
+                                <!-- Diisi dinamis oleh JS -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-100">
+                        <button type="button" onclick="applySimulationToForm()" class="w-full py-4 px-6 rounded-2xl bg-brand-navy hover:bg-brand-blue text-white font-bold text-sm sm:text-base shadow-lg transition-all flex items-center justify-center gap-2.5">
+                            <span>Ajukan Paket Ini Sekarang</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         7. FORMULIR KONTAK & KONSULTASI GRATIS
+    ====================================================================== -->
+    <section id="kontak" class="py-20 lg:py-28 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Info Kontak & Ajakan -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-100 text-brand-green font-bold text-xs uppercase tracking-wider">
+                        Hubungi Kami
+                    </span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-brand-navy leading-tight">
+                        Siap Membuat Bisnis Anda Bersinar?
+                    </h2>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Jadwalkan sesi konsultasi gratis bersama tim ahli strategi kami. Ceritakan kebutuhan bisnis Anda, dan kami akan merancang solusi periklanan yang paling efektif untuk anggaran Anda.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+                            <div class="w-11 h-11 rounded-xl bg-blue-100 text-brand-blue flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-brand-navy text-sm">Kantor Pusat</h4>
+                                <p class="text-sm text-slate-600 mt-0.5">Menara Sudirman Lt. 15, Jl. Jend. Sudirman Kav. 60, Jakarta Selatan</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+                            <div class="w-11 h-11 rounded-xl bg-orange-100 text-brand-orange flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-brand-navy text-sm">Email &amp; Telepon</h4>
+                                <p class="text-sm text-slate-600 mt-0.5">halo@advertisingforall.id | +62 21 5550 8899</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+                            <div class="w-11 h-11 rounded-xl bg-emerald-100 text-brand-green flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-bold text-brand-navy text-sm">Layanan Cepat WhatsApp</h4>
+                                <p class="text-sm text-slate-600 mt-0.5">+62 812 9000 4455 (Senin - Sabtu, 08.00 - 20.00 WIB)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulir Konsultasi Interaktif -->
+                <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-200/80 relative">
+                    
+                    <!-- Pesan Konfirmasi Sukses (Tersembunyi Awalnya) -->
+                    <div id="form-success-box" class="hidden text-center py-10 px-4 space-y-5">
+                        <div class="w-20 h-20 rounded-full bg-emerald-100 text-brand-green flex items-center justify-center text-4xl mx-auto shadow-inner">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl sm:text-3xl font-extrabold text-brand-navy">
+                            Permintaan Konsultasi Terkirim!
+                        </h3>
+                        <p id="success-detail-text" class="text-slate-600 max-w-md mx-auto text-sm sm:text-base leading-relaxed">
+                            Terima kasih telah menghubungi <strong>Advertising for All</strong>. Konsultan strategis kami akan segera menghubungi Anda dalam waktu maksimal 1x24 jam kerja.
+                        </p>
+                        <div class="pt-4">
+                            <button type="button" onclick="resetConsultationForm()" class="px-6 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-brand-navy font-bold text-sm transition-colors">
+                                Kirim Pertanyaan Lainnya
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Form Utama -->
+                    <form id="consultation-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                        <div class="border-b border-slate-100 pb-4">
+                            <h3 class="font-heading text-xl sm:text-2xl font-bold text-brand-navy">
+                                Formulir Konsultasi Gratis
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-500 mt-1">
+                                Lengkapi data singkat berikut agar kami dapat menyiapkan analisis awal untuk merek Anda.
+                            </p>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="input-name" class="block text-sm font-semibold text-slate-700 mb-1.5">Nama Lengkap *</label>
+                                <input type="text" id="input-name" required placeholder="Contoh: Budi Santoso" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none text-sm transition-all">
+                            </div>
+                            <div>
+                                <label for="input-business" class="block text-sm font-semibold text-slate-700 mb-1.5">Nama Bisnis / Merek *</label>
+                                <input type="text" id="input-business" required placeholder="Contoh: Kopi Nusantara Jaya" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none text-sm transition-all">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="input-email" class="block text-sm font-semibold text-slate-700 mb-1.5">Alamat Email *</label>
+                                <input type="email" id="input-email" required placeholder="nama@bisnisanda.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none text-sm transition-all">
+                            </div>
+                            <div>
+                                <label for="input-phone" class="block text-sm font-semibold text-slate-700 mb-1.5">Nomor WhatsApp *</label>
+                                <input type="tel" id="input-phone" required placeholder="0812-3456-7890" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none text-sm transition-all">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="input-service" class="block text-sm font-semibold text-slate-700 mb-1.5">Layanan yang Diminati</label>
+                                <select id="input-service" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none text-sm bg-white transition-all">
+                                    <option value="Pemasaran Digital (Social Media, SEM, SEO)">Pemasaran Digital (Social Media, SEM, SEO)</option>
+                                    <option value="Periklanan Tradisional (Cetak, OOH, Broadcast)">Periklanan Tradisional (Cetak, OOH, Broadcast)</option>
+                                    <option value="Layanan Kreatif (Branding, Video, Foto Produk)">Layanan Kreatif (Branding, Video, Foto Produk)</option>
+                                    <option value="Konsultasi & Strategi Kampanye Terpadu">Konsultasi &amp; Strategi Kampanye Terpadu</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="input-budget-select" class="block text-sm font-semibold text-slate-700 mb-1.5">Estimasi Anggaran</label>
+                                <input type="text" id="input-budget-select" placeholder="Contoh: Rp 5.000.000 / bulan" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none text-sm transition-all">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="input-message" class="block text-sm font-semibold text-slate-700 mb-1.5">Ceritakan Tujuan Kampanye Anda *</label>
+                            <textarea id="input-message" rows="3" required placeholder="Tuliskan target audiens, produk unggulan, atau tantangan pemasaran yang sedang Anda hadapi..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none text-sm transition-all"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 px-6 rounded-2xl bg-brand-orange hover:bg-orange-600 text-white font-bold text-base shadow-lg shadow-orange-500/25 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2.5">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Kirim Permintaan Konsultasi Gratis</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         FOOTER
+    ====================================================================== -->
+    <footer class="bg-brand-navy text-slate-300 pt-16 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Kolom Brand -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center">
+                            <svg viewBox="0 0 64 64" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M31 56C31 44 37 33 48 22L44 20C33 30 25 42 24 56H31Z" fill="#16A34A"/>
+                                <path d="M18 56C21 42 32 30 50 17L47 15C28 27 16 40 11 56H18Z" fill="#F97316"/>
+                                <path d="M9 44C12 31 23 27 33 27C40 27 46 21 51 15L44 10L59 7L56 22L50 17C44 25 36 32 25 32C17 32 13 37 11 46L9 44Z" fill="#1D63DC"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="font-heading font-extrabold text-xl text-white tracking-tight block leading-none">
+                                ADVERTISING <span class="text-brand-orange">FOR ALL</span>
+                            </span>
+                            <span class="text-xs text-sky-300">Jangkauan Luas, Solusi Cerdas</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed max-w-md">
+                        "Advertising for All" — Dimana setiap bisnis memiliki kesempatan untuk bersinar! Kami mendemokratisasi akses layanan periklanan kreatif dan terukur bagi UMKM hingga perusahaan besar.
+                    </p>
+                    <!-- Sosial Media -->
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="#kontak" aria-label="Instagram" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-brand-orange text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#kontak" aria-label="LinkedIn" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-brand-blue text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#kontak" aria-label="TikTok" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-brand-green text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="#kontak" aria-label="YouTube" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-red-600 text-white flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tautan Cepat -->
+                <div class="lg:col-span-3 space-y-3">
+                    <h4 class="font-heading font-bold text-white text-base">Navigasi</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#tentang" class="hover:text-brand-orange transition-colors">Tentang Kami</a></li>
+                        <li><a href="#layanan" class="hover:text-brand-orange transition-colors">Layanan Utama</a></li>
+                        <li><a href="#keunggulan" class="hover:text-brand-orange transition-colors">Keunggulan Bersaing</a></li>
+                        <li><a href="#simulasi" class="hover:text-brand-orange transition-colors">Simulasi Anggaran</a></li>
+                        <li><a href="#kontak" class="hover:text-brand-orange transition-colors">Konsultasi Gratis</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tagar Terkait -->
+                <div class="lg:col-span-4 space-y-3">
+                    <h4 class="font-heading font-bold text-white text-base">Tagar Terkait</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 rounded-lg bg-white/10 text-xs text-sky-200">#Advertising</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/10 text-xs text-orange-200">#Periklanan</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/10 text-xs text-emerald-200">#PemasaranDigital</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/10 text-xs text-sky-200">#UMKM</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/10 text-xs text-orange-200">#Branding</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/10 text-xs text-emerald-200">#StrategiIklan</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/10 text-xs text-sky-200">#Kreativitas</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/10 text-xs text-orange-200">#AdvertisingForAll</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/10 text-xs text-emerald-200">#BisnisLokal</span>
+                        <span class="px-3 py-1 rounded-lg bg-white/10 text-xs text-sky-200">#SolusiPemasaran</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+                <p>&copy; 2026 Advertising for All. Hak Cipta Dilindungi Undang-Undang.</p>
+                <p>Dibangun untuk Mendukung Pertumbuhan UMKM &amp; Korporasi Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =====================================================================
+         JAVASCRIPT INTERAKTIF
+    ====================================================================== -->
+    <script>
+        // 1. Toggle Menu Mobile
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 2. Data & Logika Tab Layanan Utama Interaktif
+        const servicesData = {
+            digital: {
+                title: 'Pemasaran Digital (Digital Marketing)',
+                subtitle: 'Jangkau audiens yang tepat pada waktu yang tepat di berbagai platform digital dengan optimasi berbasis data.',
+                badge: 'Paling Populer',
+                accentColor: 'blue',
+                items: [
+                    {
+                        icon: 'fa-share-nodes',
+                        name: 'Iklan Media Sosial (Social Media Ads)',
+                        desc: 'Kampanye bertarget presisi di Instagram, Facebook, TikTok, LinkedIn, dan YouTube untuk meningkatkan interaksi dan konversi.'
+                    },
+                    {
+                        icon: 'fa-magnifying-glass-dollar',
+                        name: 'Pemasaran Mesin Pencari (SEM / PPC)',
+                        desc: 'Penempatan iklan teratas di Google Ads untuk menangkap calon pelanggan yang sedang aktif mencari produk atau jasa Anda.'
+                    },
+                    {
+                        icon: 'fa-ranking-star',
+                        name: 'Pengoptimalan Mesin Pencari (SEO)',
+                        desc: 'Optimasi struktur website dan kata kunci strategis untuk mendongkrak peringkat organik jangka panjang.'
+                    },
+                    {
+                        icon: 'fa-pen-nib',
+                        name: 'Pemasaran Konten (Content Marketing)',
+                        desc: 'Pembuatan artikel, infografis, dan konten visual bernilai tinggi untuk membangun otoritas dan kepercayaan merek.'
+                    }
+                ]
+            },
+            tradisional: {
+                title: 'Periklanan Tradisional (Offline & Broadcast)',
+                subtitle: 'Bangun kredibilitas dan jangkauan massa yang luas melalui media konvensional berdaya dampak tinggi.',
+                badge: 'Jangkauan Luas',
+                accentColor: 'orange',
+                items: [
+                    {
+                        icon: 'fa-newspaper',
+                        name: 'Media Cetak (Print Advertising)',
+                        desc: 'Desain dan penempatan iklan profesional di surat kabar nasional/lokal, majalah bisnis, katalog, dan brosur promosi.'
+                    },
+                    {
+                        icon: 'fa-sign-hanging',
+                        name: 'Iklan Luar Ruang (OOH / Billboard)',
+                        desc: 'Titik strategis baliho, videotron, poster transportasi publik, dan branding area komersial dengan visibilitas tinggi.'
+                    },
+                    {
+                        icon: 'fa-radio',
+                        name: 'Penyiaran (Radio & Televisi)',
+                        desc: 'Produksi jingle, ad-libs, dan penempatan slot iklan di stasiun radio maupun televisi lokal hingga nasional.'
+                    },
+                    {
+                        icon: 'fa-store-alt',
+                        name: 'Aktivasi Merek & Event Lokal',
+                        desc: 'Dukungan materi promosi pameran, spanduk, dan kampanye lapangan untuk interaksi langsung dengan konsumen.'
+                    }
+                ]
+            },
+            kreatif: {
+                title: 'Layanan Kreatif & Produksi Visual',
+                subtitle: 'Wujudkan identitas merek yang kuat dan memikat melalui karya visual berstandar agensi profesional.',
+                badge: 'Identitas Merek',
+                accentColor: 'green',
+                items: [
+                    {
+                        icon: 'fa-bezier-curve',
+                        name: 'Branding & Desain Logo',
+                        desc: 'Perancangan logo ikonik, palet warna, tipografi, dan panduan identitas visual (Brand Guidelines) yang mudah diingat.'
+                    },
+                    {
+                        icon: 'fa-clapperboard',
+                        name: 'Produksi Video Iklan (TVC & Reels)',
+                        desc: 'Konsep naskah, pengambilan gambar, hingga penyuntingan video komersial dinamis untuk media sosial dan penyiaran.'
+                    },
+                    {
+                        icon: 'fa-camera-retro',
+                        name: 'Fotografi Produk Profesional',
+                        desc: 'Sesi foto katalog e-commerce, kuliner, fesyen, dan gaya hidup dengan pencahayaan studio maupun lokasi.'
+                    },
+                    {
+                        icon: 'fa-object-group',
+                        name: 'Desain Kemasan & Materi Promosi',
+                        desc: 'Tampilan kemasan produk yang menarik perhatian di rak toko maupun layar ponsel pelanggan.'
+                    }
+                ]
+            },
+            strategi: {
+                title: 'Konsultasi & Strategi Periklanan',
+                subtitle: 'Pastikan setiap keputusan pemasaran Anda didasari riset mendalam dan perencanaan media yang efisien.',
+                badge: 'Solusi Cerdas',
+                accentColor: 'navy',
+                items: [
+                    {
+                        icon: 'fa-users-viewfinder',
+                        name: 'Analisis Audiens & Riset Pasar',
+                        desc: 'Pemetaan demografi, perilaku konsumen, serta analisis kompetitor untuk menemukan celah peluang terbaik.'
+                    },
+                    {
+                        icon: 'fa-calendar-check',
+                        name: 'Perencanaan Media (Media Planning)',
+                        desc: 'Alokasi anggaran lintas kanal (digital & offline) yang paling optimal sesuai skala bisnis Anda.'
+                    },
+                    {
+                        icon: 'fa-chart-line',
+                        name: 'Pelacakan Kinerja & Pelaporan',
+                        desc: 'Dashboard analitik dan laporan berkala yang mudah dipahami untuk mengukur efektivitas kampanye.'
+                    },
+                    {
+                        icon: 'fa-compass-drafting',
+                        name: 'Pendampingan Pertumbuhan UMKM',
+                        desc: 'Sesi mentoring rutin bagi pemilik usaha untuk membangun fondasi pemasaran berkelanjutan.'
+                    }
+                ]
+            }
+        };
+
+        function switchServiceTab(tabKey) {
+            // Update tampilan tombol tab
+            document.querySelectorAll('.service-tab').forEach(btn => {
+                btn.classList.remove('bg-brand-navy', 'text-white', 'shadow-lg');
+                btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+            });
+
+            const activeBtn = document.getElementById(`tab-${tabKey}`);
+            activeBtn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+            activeBtn.classList.add('bg-brand-navy', 'text-white', 'shadow-lg');
+
+            // Render konten layanan
+            const data = servicesData[tabKey];
+            const container = document.getElementById('service-content-area');
+
+            const badgeColors = {
+                blue: 'bg-blue-100 text-brand-blue',
+                orange: 'bg-orange-100 text-brand-orange',
+                green: 'bg-emerald-100 text-brand-green',
+                navy: 'bg-slate-200 text-brand-navy'
+            };
+
+            const iconBgColors = {
+                blue: 'bg-blue-50 text-brand-blue',
+                orange: 'bg-orange-50 text-brand-orange',
+                green: 'bg-emerald-50 text-brand-green',
+                navy: 'bg-slate-100 text-brand-navy'
+            };
+
+            let cardsHtml = data.items.map(item => `
+                <div class="p-6 rounded-2xl bg-slate-50/80 hover:bg-white border border-slate-200/80 hover:border-brand-blue/40 hover:shadow-md transition-all">
+                    <div class="w-12 h-12 rounded-xl ${iconBgColors[data.accentColor]} flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid ${item.icon}"></i>
+                    </div>
+                    <h4 class="font-heading font-bold text-lg text-brand-navy mb-2">${item.name}</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">${item.desc}</p>
+                </div>
+            `).join('');
+
+            container.innerHTML = `
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-8 mb-8 border-b border-slate-100">
+                    <div class="space-y-2 max-w-2xl">
+                        <span class="inline-block px-3 py-1 rounded-lg ${badgeColors[data.accentColor]} text-xs font-bold uppercase tracking-wider">
+                            ${data.badge}
+                        </span>
+                        <h3 class="font-heading text-2xl sm:text-3xl font-extrabold text-brand-navy">${data.title}</h3>
+                        <p class="text-slate-600 text-sm sm:text-base">${data.subtitle}</p>
+                    </div>
+                    <a href="#kontak" onclick="preselectService('${data.title}')" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-orange hover:bg-orange-600 text-white font-bold text-sm shadow-md transition-all shrink-0">
+                        <span>Konsultasi Layanan Ini</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-6">
+                    ${cardsHtml}
+                </div>
+            `;
+        }
+
+        // Inisialisasi Tab Pertama saat halaman dimuat
+        switchServiceTab('digital');
+
+        // 3. Logika Simulasi / Kalkulator Anggaran Iklan
+        let currentScale = 'umkm';
+        let currentGoal = 'awareness';
+
+        function selectScale(scale) {
+            currentScale = scale;
+            document.querySelectorAll('.scale-btn').forEach(btn => {
+                btn.classList.remove('border-2', 'border-brand-orange', 'bg-brand-orange/20');
+                btn.classList.add('border', 'border-white/15', 'bg-white/5');
+            });
+            const active = document.getElementById(`scale-${scale}`);
+            active.classList.remove('border', 'border-white/15', 'bg-white/5');
+            active.classList.add('border-2', 'border-brand-orange', 'bg-brand-orange/20');
+
+            // Sesuaikan default slider agar relevan
+            const slider = document.getElementById('budget-slider');
+            if (scale === 'umkm' && slider.value > 15) slider.value = 5;
+            if (scale === 'menengah' && (slider.value < 15 || slider.value > 45)) slider.value = 25;
+            if (scale === 'korporasi' && slider.value < 45) slider.value = 60;
+
+            updateSimulation();
+        }
+
+        function selectGoal(goal) {
+            currentGoal = goal;
+            document.querySelectorAll('.goal-btn').forEach(btn => {
+                btn.classList.remove('border-2', 'border-sky-400', 'bg-sky-500/20');
+                btn.classList.add('border', 'border-white/15', 'bg-white/5');
+            });
+            const active = document.getElementById(`goal-${goal}`);
+            active.classList.remove('border', 'border-white/15', 'bg-white/5');
+            active.classList.add('border-2', 'border-sky-400', 'bg-sky-500/20');
+
+            updateSimulation();
+        }
+
+        function formatRupiah(juta) {
+            return 'Rp ' + (juta * 1000000).toLocaleString('id-ID');
+        }
+
+        function updateSimulation() {
+            const budgetJuta = parseInt(document.getElementById('budget-slider').value, 10);
+            const hasVideo = document.getElementById('addon-video').checked;
+            const hasOoh = document.getElementById('addon-ooh').checked;
+            const hasSeo = document.getElementById('addon-seo').checked;
+
+            document.getElementById('budget-display').textContent = formatRupiah(budgetJuta);
+
+            // Kalkulasi estimasi jangkauan & klik
+            const reachMin = Math.round(budgetJuta * 9500);
+            const reachMax = Math.round(budgetJuta * 16500);
+            const clickMin = Math.round(budgetJuta * 310);
+            const clickMax = Math.round(budgetJuta * 640);
+
+            document.getElementById('rec-reach').textContent = `${reachMin.toLocaleString('id-ID')} - ${reachMax.toLocaleString('id-ID')}`;
+            document.getElementById('rec-clicks').textContent = `${clickMin.toLocaleString('id-ID')} - ${clickMax.toLocaleString('id-ID')}`;
+
+            // Penentuan Nama Paket & Fitur
+            let badgeText = 'Paket UMKM Akselerasi';
+            let titleText = 'Starter Growth Digital';
+            let descText = 'Solusi hemat & terarah untuk meningkatkan visibilitas merek lokal dan mendatangkan pelanggan pertama.';
+            let features = [
+                'Manajemen 2 Kanal Social Media Ads (IG & FB / TikTok)',
+                'Desain 8 Materi Konten Visual & Copywriting Persuasif',
+                'Riset Target Audiens Lokal & Penjadwalan Iklan',
+                'Laporan Performa Bulanan & Evaluasi Strategi'
+            ];
+
+            if (currentScale === 'menengah' || (budgetJuta >= 15 && budgetJuta < 45)) {
+                badgeText = 'Paket Bisnis Berkembang';
+                titleText = 'Scale-Up Omni-Channel';
+                descText = 'Kombinasi kampanye media sosial dan mesin pencari untuk memperluas pangsa pasar regional secara konsisten.';
+                features = [
+                    'Kampanye Multi-Platform (Meta Ads, TikTok Ads & Google SEM)',
+                    'Produksi 16 Konten Kreatif + 2 Video Pendek Promosi',
+                    'Optimasi Landing Page & Retargeting Audiens Potensial',
+                    'Manajer Akun Khusus & Laporan Mingguan Real-Time'
+                ];
+            }
+
+            if (currentScale === 'korporasi' || budgetJuta >= 45) {
+                badgeText = 'Paket Korporasi 360°';
+                titleText = 'Enterprise Market Leader';
+                descText = 'Kampanye periklanan terintegrasi skala penuh yang menggabungkan dominasi digital dan media tradisional.';
+                features = [
+                    'Full-Funnel Digital Ads (YouTube, Google, Meta, LinkedIn)',
+                    'Perencanaan Media Luar Ruang (OOH/Billboard) & Radio/TV',
+                    'Tim Kreatif Dedikasi Penuh & Produksi Video Komersial',
+                    'Analisis Data Mendalam & Konsultasi Strategi Eksekutif'
+                ];
+            }
+
+            // Penyesuaian berdasarkan tujuan
+            if (currentGoal === 'leads') {
+                features[0] = 'Fokus Konversi & Lead Generation (WhatsApp / Website / Form)';
+            } else if (currentGoal === 'branding') {
+                features[1] = 'Penyegaran Identitas Visual, Brand Storytelling & Konten Premium';
+            }
+
+            // Tambahkan Add-on yang dicentang
+            if (hasVideo) features.push('Bonus Add-on: Produksi Video Iklan Profesional');
+            if (hasOoh) features.push('Bonus Add-on: Penempatan Media Cetak / Titik Strategis OOH');
+            if (hasSeo) features.push('Bonus Add-on: Audit & Optimasi SEO Website Berkelanjutan');
+
+            document.getElementById('rec-badge').textContent = badgeText;
+            document.getElementById('rec-title').textContent = titleText;
+            document.getElementById('rec-desc').textContent = descText;
+
+            const featuresList = document.getElementById('rec-features');
+            featuresList.innerHTML = features.map(f => `
+                <li class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-circle-check text-brand-green mt-1 shrink-0"></i>
+                    <span>${f}</span>
+                </li>
+            `).join('');
+        }
+
+        // Inisialisasi simulasi awal
+        updateSimulation();
+
+        // Kirim hasil simulasi ke formulir kontak
+        function applySimulationToForm() {
+            const budgetText = document.getElementById('budget-display').textContent;
+            const packageTitle = document.getElementById('rec-title').textContent;
+
+            document.getElementById('input-budget-select').value = `${budgetText} / bulan`;
+            document.getElementById('input-message').value = `Halo Advertising for All, saya tertarik dengan rekomendasi "${packageTitle}" dengan estimasi anggaran ${budgetText}/bulan. Mohon informasi lebih lanjut untuk konsultasi.`;
+
+            document.getElementById('kontak').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function preselectService(serviceTitle) {
+            const select = document.getElementById('input-service');
+            for (let i = 0; i < select.options.length; i++) {
+                if (serviceTitle.includes('Digital') && i === 0) select.selectedIndex = 0;
+                if (serviceTitle.includes('Tradisional') && i === 1) select.selectedIndex = 1;
+                if (serviceTitle.includes('Kreatif') && i === 2) select.selectedIndex = 2;
+                if (serviceTitle.includes('Strategi') && i === 3) select.selectedIndex = 3;
+            }
+        }
+
+        // 4. Penanganan Pengiriman Formulir Konsultasi
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('input-name').value.trim();
+            const business = document.getElementById('input-business').value.trim();
+            const service = document.getElementById('input-service').value;
+
+            const formEl = document.getElementById('consultation-form');
+            const successBox = document.getElementById('form-success-box');
+            const detailText = document.getElementById('success-detail-text');
+
+            detailText.innerHTML = `
+                Terima kasih, <strong>${name}</strong> dari <strong>${business}</strong>! Permintaan konsultasi untuk layanan <em>${service}</em> telah kami terima. Tim ahli strategi <strong>Advertising for All</strong> akan segera menghubungi Anda dalam maksimal 1x24 jam kerja.
+            `;
+
+            formEl.classList.add('hidden');
+            successBox.classList.remove('hidden');
+        }
+
+        function resetConsultationForm() {
+            document.getElementById('consultation-form').reset();
+            document.getElementById('form-success-box').classList.add('hidden');
+            document.getElementById('consultation-form').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
+```
